@@ -37,7 +37,6 @@
   [] names of ids
   //CSS
   [x] "appearance" property
-  [] refrain from using ids
   [] clearer css variable names e.g primary-colour
 
   Javascript
