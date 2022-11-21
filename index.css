@@ -1,7 +1,6 @@
 
 /***** COLOR PALETTES *****/
 /*Default #orange theme*/
-
 :root {
     --clr-header-bg: #D97706;
     --clr-header-others: #B45309;
@@ -10,7 +9,6 @@
     --clr-h1: #1F2937;
     --clr-h2: #ffffff;
     --clr-span: #D97706;
-
 }
 
 /* #blue theme*/
@@ -24,7 +22,7 @@
     --clr-h2: #fffff;
     --clr-span: #1F2937;
 }
-
+/*Fallback classes for no :has() support*/
 .orange {
     --clr-header-bg: #D97706;
     --clr-header-others: #B45309;
