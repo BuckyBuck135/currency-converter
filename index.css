@@ -1,0 +1,205 @@
+
+/***** COLOR PALETTES *****/
+/*Default #orange theme*/
+
+:root {
+    --clr-header-bg: #D97706;
+    --clr-header-others: #B45309;
+    --clr-section-bg: #1F2937;
+    --clr-currency-bg: #0C4A6E;
+    --clr-h1: #1F2937;
+    --clr-h2: #ffffff;
+    --clr-span: #D97706;
+
+}
+
+/* #blue theme*/
+/*When the root (i.e. anywhere in the document) has the #blue radio button checked */
+:root:has(#blue:checked) {
+    --clr-header-bg: #1F2937;
+    --clr-header-others: #0C4A6E;
+    --clr-section-bg: #D97706;
+    --clr-currency-bg: #B45309;
+    --clr-h1: #D97706;
+    --clr-h2: #fffff;
+    --clr-span: #1F2937;
+}
+
+.orange {
+    --clr-header-bg: #D97706;
+    --clr-header-others: #B45309;
+    --clr-section-bg: #1F2937;
+    --clr-currency-bg: #0C4A6E;
+    --clr-h1: #1F2937;
+    --clr-h2: #ffffff;
+    --clr-span: #D97706;
+}
+
+.blue {
+    --clr-header-bg: #1F2937;
+    --clr-header-others: #0C4A6E;
+    --clr-section-bg: #D97706;
+    --clr-currency-bg: #B45309;
+    --clr-h1: #D97706;
+    --clr-h2: #fffff;
+    --clr-span: #1F2937;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/***** LAYOUT *****/
+
+body {
+    margin: 0;
+    text-align: center;
+    font-family: "inter", sans-serif;
+    background-color: var(--clr-header-bg);
+    color: white;
+}
+
+/***** COLOR PICKER *****/
+
+/* Hides the labels and legend for screen readers purposes */
+.visually-hidden {
+    clip-path: inset(50%);
+    position: absolute;
+}
+
+.color-picker > fieldset {
+    border: none;
+    border-radius: 0 0 5px 5px;
+    background-color: white;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    column-gap: 2em;
+    margin: auto;
+    padding: 1em 3em;
+}
+
+.color-picker input[type="radio"] {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 1em;
+    height: 1em;
+    /*outline + outline-offset create the radio type border, as opposed to just using border*/
+    outline: 3px solid var(--radio-color, currentColor);
+    outline-offset: 3px;
+    border-radius: 50%;
+}
+
+/***** CONTROLING THE COLOR PICKER *****/
+.color-picker input[type="radio"]:checked {
+    background-color: var(--radio-color)
+}
+
+#orange {
+    --radio-color: #D97706;
+}
+
+#blue {
+    --radio-color: #1F2937;
+}
+
+/***** SECTIONS *****/
+
+section {
+    width: 100%;
+    margin-top: 1em;
+    padding: 1em 0;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 600px;
+}
+
+/*** CONVERTER SECTION ***/
+section.converter-section {
+    background-color: var(--clr-header-bg);
+    margin-top: 0;
+}
+
+input[type=number] {
+    width: 100%;
+    background-color: var(--clr-header-bg);
+    color: white;
+    font-size: 3em;
+    text-align: inherit;
+    padding: 0;
+    border: 5px solid var(--clr-header-others);
+    border-radius: 5px;
+    box-shadow: 2px 2px px black;
+}
+
+/*Styling the input spinners*/
+input[type=number]::-webkit-outer-spin-button, 
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    }
+      
+div.flex-container button {
+    width: 50%;
+    max-width: 600px;
+    min-width: fit-content;
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: white;
+    color: var(--clr-header-others);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+div.flex-container button:hover, div.flex-container button:active {
+    background-color: var(--clr-currency-bg);
+    color: white;
+}
+
+/*** CURRENCIES SECTION ***/
+section.currencies-section {
+    background-color: var(--clr-section-bg);
+}
+
+.currency-card {
+    background-color: var(--clr-currency-bg);
+    width: 100%;
+    max-width: 600px;
+    margin: 1em 0;
+}
+
+/***** TYPOGRAPHY *****/
+header h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 2.6em;
+    font-weight: 800;
+    color: var(--clr-h1);
+    margin: 0.5em 0;  
+}
+
+h2 {
+    color: var(--clr-h2);
+    font-size: 1.2em;
+    font-weight: 700
+}
+
+.currency-color {
+    color: var(--clr-span);
+    font-weight: 600
+}

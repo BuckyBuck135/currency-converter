@@ -1,0 +1,50 @@
+/***** CREDITS *****/
+ - Scrimba: Module 3 : Making websites interactive
+ https://scrimba.com/learn/frontend/solo-project-unit-converter-cz9aPNSr
+ - Kevin Powell: How to create a theme switcher with HTML & CSS
+ https://www.youtube.com/watch?v=fyuao3G-2qg&t=848s
+ 
+ /***** TO-DO *****/
+ - Implement an API to fetch live FX rates
+ https://duaneblake.co.uk/front-end/javascript-currency-conversion-tool-using-fetch/
+  - Implement dropdown menus in the header to pick currencies
+
+  /***** CODE REVIEW *****/
+  
+  Functionality & Design
+  * works
+  * loved how extended with currency and theming
+  * clever use of number input
+  * responsive
+  
+  Consider
+  [x] Add cursor: pointer to button to make action clearer
+  [x] Removing margin from outside the container
+  [x] Think about contrasts for theming
+        -- WCAG color contrast checker:
+        https://chrome.google.com/webstore/detail/wcag-color-contrast-check/plnahcmalebffmaghcpcmpaciebdhgdf?hl=en
+        
+  HTML & CSS
+  * well-indented code
+  * Use of headings
+  * clear classes
+  * well commented
+
+  Consider
+  //HTML
+  [x] Semantic use of HTML elements
+  [x] label for currency inputs
+  [] names of ids
+  //CSS
+  [x] "appearance" property
+  [] refrain from using ids
+  [] clearer css variable names e.g primary-colour
+
+  Javascript
+  * Const declared keyword
+  * Ordered and clear
+  
+  Consider
+  [x] having the exchange rate as a varible, so it can be changed
+  [x] how could code be more DRY? Is there a way you could use a function with arguments
+

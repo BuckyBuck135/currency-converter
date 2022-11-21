@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:ital,wght@0,800;1,400&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="images/favicon.png">
+        <link rel="stylesheet" href="index.css">
+        <title>₡urrency ₡onverter</title>
+    </head>
+    <body>
+        <header>
+            <form class="color-picker">
+                <fieldset>
+                    <legend class="visually-hidden">Pick a color scheme</legend>
+                    <label for="theme" class="visually-hidden">Orange</label>
+                    <input type="radio" name="theme" id="orange" checked>
+                    <label for="theme" class="visually-hidden">Blue</label>
+                    <input type="radio" name="theme" id="blue">    
+                </fieldset>
+            </form>
+        </header>
+        <section class="converter-section">
+            <form>
+                <h1>₡urrency ₡onverter</h1>
+                <div class="flex-container">
+                    <legend class="visually-hidden">Currency converter</legend>
+                    <label for="input" class="visually-hidden">Enter a number to convert</label>
+                    <input id="input" type="number" name="currency" min="1" value="1" required>
+                    <button id="button-el">CONVERT</button>
+                </div>
+             </form>
+        </section>   
+        <section class="currencies-section"> 
+            <div class="flex-container">
+                <div class="currency-card">
+                    <h2>Hong Kong Dollar (HKD)</h2>
+                    <p id="hkd-el"></p>
+                </div>
+                <div class="currency-card">
+                    <h2>Australian Dollar (AUD)</h2>
+                    <p id="aud-el"></p>
+                </div>
+                <div class="currency-card">
+                    <h2>Malaysian Ringgit (MYR)</h2>
+                    <p id="myr-el"></p>
+                </div>
+            </div>
+        </section>
+        <script src="index.js"></script>
+    </body>
+</html>
