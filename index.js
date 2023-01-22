@@ -29,6 +29,7 @@ buttonEl.addEventListener("click", function(event) {
     inputValue = input.valueAsNumber // using .value returns a string (we will then need Number() to convert to a number), whereas using .valueAsNumber reurns a number
     if(inputValue < 1) {
       alert("Please input a value greater than 1")
+      input.value = 1
     } else {
       convert();
       render(hkdEl, "EUR", "HKD", euroToHkd, hkdToEur);
