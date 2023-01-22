@@ -27,10 +27,15 @@ let myrToEur  = 0
 buttonEl.addEventListener("click", function(event) {
     event.preventDefault() //prevents the form from submitting itself
     inputValue = input.valueAsNumber // using .value returns a string (we will then need Number() to convert to a number), whereas using .valueAsNumber reurns a number
-    convert();
-    render(hkdEl, "EUR", "HKD", euroToHkd, hkdToEur);
-    render(audEl, "EUR", "AUD", euroToAud, audToEur);
-    render(myrEl, "EUR", "MYR", euroToMyr, myrToEur);
+    if(inputValue < 1) {
+      alert("Please input a value greater than 1")
+    } else {
+      convert();
+      render(hkdEl, "EUR", "HKD", euroToHkd, hkdToEur);
+      render(audEl, "EUR", "AUD", euroToAud, audToEur);
+      render(myrEl, "EUR", "MYR", euroToMyr, myrToEur);
+    }
+    
 })
 
 function getFXRate(inputValue, FXRate) {
