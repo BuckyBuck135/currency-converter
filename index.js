@@ -28,10 +28,9 @@ buttonEl.addEventListener("click", function(event) {
     event.preventDefault() //prevents the form from submitting itself
     inputValue = input.valueAsNumber // using .value returns a string (we will then need Number() to convert to a number), whereas using .valueAsNumber reurns a number
     convert();
-    render(hkdEl, euroToHkd, hkdToEur);
-    render(audEl, euroToAud, audToEur);
-    render(myrEl, euroToMyr, myrToEur);
-
+    render(hkdEl, "EUR", "HKD", euroToHkd, hkdToEur);
+    render(audEl, "EUR", "AUD", euroToAud, audToEur);
+    render(myrEl, "EUR", "MYR", euroToMyr, myrToEur);
 })
 
 function getFXRate(inputValue, FXRate) {
@@ -48,11 +47,11 @@ function convert() {
     myrToEur =  getFXRate(inputValue, 1 / eurMyrRate)
 }
 
-function render(el, euroToCurrency, currencyToEuro) {
+function render(el, firstCurrency, secondCurrency, euroToCurrency, currencyToEuro) {
     el.innerHTML = `
-        <span class="currency-color">${inputValue}</span> EUR = <span class="currency-color">${euroToCurrency}</span> HKD <br>
+        <span class="currency-color">${inputValue}</span> ${firstCurrency} = <span class="currency-color">${euroToCurrency}</span> ${secondCurrency} <br>
         ---<br>
-        <span class="currency-color">${inputValue}</span> HKD = <span class="currency-color">${currencyToEuro}</span> EUR
+        <span class="currency-color">${inputValue}</span> ${secondCurrency} = <span class="currency-color">${currencyToEuro}</span> ${firstCurrency}
         `
 }
 
